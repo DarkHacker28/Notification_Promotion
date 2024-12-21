@@ -1,0 +1,174 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Image Slideshow */
+@keyframes slideShow {
+  0% { background-image: url('https://example.com/christmas1.jpg'); }
+  33% { background-image: url('https://example.com/christmas2.jpg'); }
+  66% { background-image: url('https://example.com/hacker1.jpg'); }
+  100% { background-image: url('https://example.com/hacker2.jpg'); }
+}
+
+/* Rocket Animation */
+@keyframes flyRocket {
+  0% { left: -200px; transform: rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+  100% { left: 100%; transform: translateY(0) rotate(360deg); }
+}
+
+.rocket {
+  position: absolute;
+  bottom: 20%;
+  left: -200px;
+  width: 100px;
+  height: 100px;
+  background: url('https://example.com/rocket.png') no-repeat center center;
+  background-size: contain;
+  animation: flyRocket 15s linear infinite;
+}
+
+/* Cloud Animation */
+@keyframes moveClouds {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.clouds {
+  position: absolute;
+  top: 30%;
+  left: -100%;
+  width: 200%;
+  height: 200px;
+  background: url('https://example.com/clouds.png') repeat-x;
+  animation: moveClouds 30s linear infinite;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Particle Animation */
+@keyframes particles {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: particles 3s infinite ease-in-out;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Slideshow Animation */
+.launch-container {
+  text-align: center;
+  padding: 50px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.heading {
+  font-size: 40px;
+  color: #ffcc00;
+}
+
+.subheading {
+  font-size: 24px;
+  color: #f0f0f0;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.timer-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 15px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transform: scale(1);
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.timer-number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffcc00;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.timer-label {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.stay-updated-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcc00;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stay-updated-btn:hover {
+  background-color: #e6a800;
+}
+
